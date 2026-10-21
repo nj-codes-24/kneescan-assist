@@ -1,0 +1,6 @@
+run_id,date,config_path,change,macro_auc_oof,ci_low,ci_high,gain_vs_prev,gain_ci_low,gain_ci_high,kept,notes
+b0,2026-10-20,configs/b0_alexnet.yaml,"B0: Bien et al. 2018 reproduction (AlexNet, max-pool, 9 CNNs + LR fusion)",0.8549,0.8393,0.8691,,,,baseline,
+reader_r18_fbn,2026-10-20,runs/reader_r18_fbn/config.yaml,"R1b: Reader, joint planes, frozen BatchNorm",0.8327,0.8155,0.849,-0.0221,-0.0337,-0.0108,False,
+reader_r2,2026-10-20,runs/reader_r2/components.yaml,"R2: three plane specialists, equal logit vote",0.8502,0.8347,0.8646,-0.0046,-0.0145,0.005,False,"vs R1b: +0.0172 (+0.0081 to +0.0270), kept over R1b"
+reader_r2_seeds,2026-10-20,runs/reader_r2_seeds/config.yaml,R2 with 2 seeds per specialist (L3),0.8539,0.8386,0.8681,0.0037,0.0001,0.0075,True,"vs B0: -0.0009 (-0.010 to +0.009), tied"
+hybrid_r2s_b0,2026-10-20,runs/hybrid_r2s_b0/config.yaml,"Hybrid: R2 (2 seeds) + B0, mean logit",0.8639,0.8494,0.8773,0.0091,0.0055,0.0129,True,contains B0

@@ -1,0 +1,21 @@
+# L1: R1b with a ConvNeXt-Tiny backbone (ImageNet-22k pretrained, LayerNorm instead of BatchNorm). The only change vs
+# configs/reader_r18_fbn.yaml is the backbone (freeze_batchnorm stays on but has nothing to freeze).
+name: reader_cnxt
+backbone: convnext_tiny.fb_in22k_ft_in1k
+pretrained: true
+att_dim: 128
+dropout: 0.25
+plane_dropout: 0.2
+freeze_batchnorm: true
+epochs: 20
+lr: 1.0e-4
+head_lr: 1.0e-3
+weight_decay: 1.0e-4
+accumulate_exams: 8
+rotate_deg: 25.0
+shift_px: 25.0
+flip_p: 0.5
+amp: true
+deterministic: true
+num_workers: 0
+seed: 42

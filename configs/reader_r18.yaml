@@ -1,0 +1,20 @@
+# R1: the Reader as designed (DESIGN.md §1). ResNet-18, 2.5D slices, gated attention per plane x finding,
+# plane voting with plane dropout. Same folds, inner tuning split and augmentation as B0.
+name: reader_r18
+backbone: resnet18
+pretrained: true
+att_dim: 128
+dropout: 0.25
+plane_dropout: 0.2
+epochs: 20
+lr: 1.0e-4
+head_lr: 1.0e-3
+weight_decay: 1.0e-4
+accumulate_exams: 8
+rotate_deg: 25.0
+shift_px: 25.0
+flip_p: 0.5
+amp: true
+deterministic: true
+num_workers: 0
+seed: 42

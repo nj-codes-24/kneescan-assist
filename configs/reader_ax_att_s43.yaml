@@ -1,0 +1,23 @@
+# Ladder L3 on R2: the ax plane specialist again, with random seed 43 instead of 42. Three seeds per specialist are
+# averaged (mean logit) to test whether a seed ensemble beats R2 by more than its CI. Otherwise identical to reader_ax_att.
+name: reader_ax_att_s43
+backbone: resnet18
+pretrained: true
+att_dim: 128
+dropout: 0.25
+plane_dropout: 0.2
+freeze_batchnorm: true
+pooling: attention
+planes: [axial]
+epochs: 20
+lr: 1.0e-4
+head_lr: 1.0e-3
+weight_decay: 1.0e-4
+accumulate_exams: 8
+rotate_deg: 25.0
+shift_px: 25.0
+flip_p: 0.5
+amp: true
+deterministic: true
+num_workers: 0
+seed: 43

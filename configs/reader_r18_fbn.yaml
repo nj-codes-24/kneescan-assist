@@ -1,0 +1,21 @@
+# R1b: R1 with frozen BatchNorm (D-010). R1 itself trained with per-exam BatchNorm statistics, which made
+# training and evaluation see different inputs. Everything else is identical to configs/reader_r18.yaml.
+name: reader_r18_fbn
+backbone: resnet18
+pretrained: true
+att_dim: 128
+dropout: 0.25
+plane_dropout: 0.2
+freeze_batchnorm: true
+epochs: 20
+lr: 1.0e-4
+head_lr: 1.0e-3
+weight_decay: 1.0e-4
+accumulate_exams: 8
+rotate_deg: 25.0
+shift_px: 25.0
+flip_p: 0.5
+amp: true
+deterministic: true
+num_workers: 0
+seed: 42

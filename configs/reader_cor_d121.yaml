@@ -1,0 +1,24 @@
+# Idea I4, second try (fold 1, coronal specialist): DenseNet-121 with timm ImageNet weights (the control).
+# DenseNet-121 is about ResNet-18's size (ResNet-50 lost to ResNet-18 by -0.048). Both DenseNet screens clip gradients at 1.0 (D-020).
+name: reader_cor_d121
+backbone: densenet121
+pretrained: true
+att_dim: 128
+dropout: 0.25
+plane_dropout: 0.2
+freeze_batchnorm: true
+pooling: attention
+planes: [coronal]
+epochs: 20
+lr: 1.0e-4
+head_lr: 1.0e-3
+weight_decay: 1.0e-4
+accumulate_exams: 8
+grad_clip: 1.0
+rotate_deg: 25.0
+shift_px: 25.0
+flip_p: 0.5
+amp: false   # RadImageNet DenseNet activations overflow fp16 (D-021); the control matches
+deterministic: true
+num_workers: 0
+seed: 42

@@ -1,0 +1,22 @@
+# S3: R1b plus deep supervision. Each plane is also trained to diagnose on its own (loss = combined + mean of plane losses).
+# Why: in R1b the coronal branch free-rode on the vote (fold-1 coronal ACL AUC 0.609 vs B0 coronal 0.837). Otherwise identical to reader_r18_fbn.
+name: reader_r18_ds
+backbone: resnet18
+pretrained: true
+att_dim: 128
+dropout: 0.25
+plane_dropout: 0.2
+freeze_batchnorm: true
+plane_loss_weight: 1.0
+epochs: 20
+lr: 1.0e-4
+head_lr: 1.0e-3
+weight_decay: 1.0e-4
+accumulate_exams: 8
+rotate_deg: 25.0
+shift_px: 25.0
+flip_p: 0.5
+amp: true
+deterministic: true
+num_workers: 0
+seed: 42

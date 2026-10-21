@@ -1,0 +1,24 @@
+# Idea I5 screen (fold 1): the sag specialist trained on the ACL finding only (loss and epoch choice use ACL alone),
+# like B0's one-network-per-finding design. Compared on fold-1 ACL AUC with reader_sag_att (all three findings).
+name: reader_sag_acl
+backbone: resnet18
+pretrained: true
+att_dim: 128
+dropout: 0.25
+plane_dropout: 0.2
+freeze_batchnorm: true
+pooling: attention
+planes: [sagittal]
+epochs: 20
+lr: 1.0e-4
+head_lr: 1.0e-3
+weight_decay: 1.0e-4
+accumulate_exams: 8
+rotate_deg: 25.0
+shift_px: 25.0
+flip_p: 0.5
+amp: true
+deterministic: true
+num_workers: 0
+seed: 42
+loss_tasks: [acl]

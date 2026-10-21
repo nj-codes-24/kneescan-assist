@@ -1,0 +1,17 @@
+# B0: reproduction of Bien et al. (2018) MRNet. See docs/EVAL_PROTOCOL.md §3.
+# The paper does not state optimiser settings; these are the public-reimplementation values.
+name: b0_alexnet
+backbone: alexnet
+pretrained: true          # torchvision AlexNet_Weights.IMAGENET1K_V1
+epochs: 50
+lr: 1.0e-5
+weight_decay: 0.01
+scheduler_factor: 0.3
+scheduler_patience: 5
+rotate_deg: 25.0
+shift_px: 25.0
+flip_p: 0.5
+amp: true
+deterministic: true
+num_workers: 0           # measured on pc_c: loading .npy is ~4 ms/exam, Windows worker start-up ~8 s/epoch
+seed: 42

@@ -1,0 +1,23 @@
+# R2 plane specialist: the Reader trained on ONE plane only (attention pooling, frozen BatchNorm). R2 = the three specialists
+# (sag, cor, ax) with their logits averaged (D-014). Diagnostic origin: the coronal-only run beat B0's coronal network (D-013).
+name: reader_ax_att
+backbone: resnet18
+pretrained: true
+att_dim: 128
+dropout: 0.25
+plane_dropout: 0.2
+freeze_batchnorm: true
+pooling: attention
+planes: [axial]
+epochs: 20
+lr: 1.0e-4
+head_lr: 1.0e-3
+weight_decay: 1.0e-4
+accumulate_exams: 8
+rotate_deg: 25.0
+shift_px: 25.0
+flip_p: 0.5
+amp: true
+deterministic: true
+num_workers: 0
+seed: 42

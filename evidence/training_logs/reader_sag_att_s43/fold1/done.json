@@ -1,0 +1,16 @@
+{
+  "fold": 1,
+  "best": {
+    "tune_loss": 0.6553325884444162,
+    "epoch": 8,
+    "tune_auc": {
+      "abnormal": 0.9348171701112877,
+      "acl": 0.7090620031796502,
+      "meniscus": 0.7510593220338984
+    }
+  },
+  "epochs": 20,
+  "config": "reader_sag_att_s43",
+  "config_hash": "15f0dd1a833b",
+  "finished": "2026-10-20T10:32:55"
+}

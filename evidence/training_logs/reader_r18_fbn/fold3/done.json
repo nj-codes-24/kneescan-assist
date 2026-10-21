@@ -1,0 +1,16 @@
+{
+  "fold": 3,
+  "best": {
+    "tune_loss": 0.5631014325011234,
+    "epoch": 6,
+    "tune_auc": {
+      "abnormal": 0.9022257551669317,
+      "acl": 0.8147853736089031,
+      "meniscus": 0.8490466101694916
+    }
+  },
+  "epochs": 20,
+  "config": "reader_r18_fbn",
+  "config_hash": "4e71848dee2f",
+  "finished": "2026-10-19T14:52:04"
+}

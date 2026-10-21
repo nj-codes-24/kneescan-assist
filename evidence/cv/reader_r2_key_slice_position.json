@@ -1,0 +1,87 @@
+{
+  "edge_definition": "d < 0.15 or d > 0.85",
+  "by_task_plane": {
+    "abnormal/axial/wrong": {
+      "edge_share": 0.029,
+      "n": 171
+    },
+    "abnormal/axial/correct": {
+      "edge_share": 0.073,
+      "n": 959
+    },
+    "abnormal/coronal/wrong": {
+      "edge_share": 0.257,
+      "n": 171
+    },
+    "abnormal/coronal/correct": {
+      "edge_share": 0.128,
+      "n": 959
+    },
+    "abnormal/sagittal/wrong": {
+      "edge_share": 0.433,
+      "n": 171
+    },
+    "abnormal/sagittal/correct": {
+      "edge_share": 0.357,
+      "n": 959
+    },
+    "acl/axial/wrong": {
+      "edge_share": 0.035,
+      "n": 460
+    },
+    "acl/axial/correct": {
+      "edge_share": 0.024,
+      "n": 670
+    },
+    "acl/coronal/wrong": {
+      "edge_share": 0.133,
+      "n": 460
+    },
+    "acl/coronal/correct": {
+      "edge_share": 0.146,
+      "n": 670
+    },
+    "acl/sagittal/wrong": {
+      "edge_share": 0.274,
+      "n": 460
+    },
+    "acl/sagittal/correct": {
+      "edge_share": 0.31,
+      "n": 670
+    },
+    "meniscus/axial/wrong": {
+      "edge_share": 0.152,
+      "n": 369
+    },
+    "meniscus/axial/correct": {
+      "edge_share": 0.189,
+      "n": 761
+    },
+    "meniscus/coronal/wrong": {
+      "edge_share": 0.087,
+      "n": 369
+    },
+    "meniscus/coronal/correct": {
+      "edge_share": 0.088,
+      "n": 761
+    },
+    "meniscus/sagittal/wrong": {
+      "edge_share": 0.347,
+      "n": 369
+    },
+    "meniscus/sagittal/correct": {
+      "edge_share": 0.447,
+      "n": 761
+    }
+  },
+  "overall": {
+    "wrong": {
+      "edge_share": 0.181,
+      "n": 3000
+    },
+    "correct": {
+      "edge_share": 0.196,
+      "n": 7170
+    }
+  }
+}

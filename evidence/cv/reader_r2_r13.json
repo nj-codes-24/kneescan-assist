@@ -1,0 +1,14 @@
+{
+  "abnormal": {
+    "mean_spearman": 0.2594334470653114,
+    "passes": true
+  },
+  "acl": {
+    "mean_spearman": 0.18082598204861977,
+    "passes": true
+  },
+  "meniscus": {
+    "mean_spearman": -0.1108895438575388,
+    "passes": true
+  }
+}

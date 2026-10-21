@@ -1,0 +1,25 @@
+{
+  "fold": 4,
+  "plane": "coronal",
+  "best": {
+    "abnormal": {
+      "tune_loss": 0.49757699198908284,
+      "epoch": 17,
+      "tune_auc": 0.8465818759936407
+    },
+    "acl": {
+      "tune_loss": 0.4136833119446637,
+      "epoch": 27,
+      "tune_auc": 0.8990461049284578
+    },
+    "meniscus": {
+      "tune_loss": 0.6219361054577998,
+      "epoch": 13,
+      "tune_auc": 0.7298728813559323
+    }
+  },
+  "epochs": 50,
+  "config_hash": "7fb6b348e453",
+  "finished": "2026-10-20T02:27:08",
+  "note": "3 task models share one augmented stream per exam (speed choice)"
+}

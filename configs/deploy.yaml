@@ -1,0 +1,13 @@
+# Settings for the hosted demo (Azure Container Apps). scripts/build_deploy.py merges these over configs/app.yaml.
+# Research prototype, not a medical device. Decision D-025 explains what may be shown publicly and why; D-026 the hosting choice.
+host: 0.0.0.0                                   # inside a container the server must listen on all interfaces
+port: 7860
+hosted: true                                    # the landing page asks for anonymised scans and says it runs on a server
+weights_repo: nj-codes-24/kneescan-weights      # PRIVATE model repo made from scripts/export_weights.py; read with the HF_TOKEN secret
+# The example study: one KneeMRI exam, copied unchanged (format change only), never an MRNet scan (MRNet RUA clause 4).
+kneemri_sample: 510057-5.pck                    # complete ACL tear; the final model says "Likely" (80%), 5 of 5 models agree
+sample_dir: samples/kneemri
+sample_note: >-
+  Example study: KneeMRI exam 510057 from Clinical Hospital Centre Rijeka, Croatia (Štajduhar et al. 2017, CC BY-NC-ND 4.0),
+  sagittal view only. Its confirmed diagnosis is a complete ACL tear. It was picked because the model reads it correctly:
+  on this hospital's scans the model misses many tears (external ACL AUC 0.70).

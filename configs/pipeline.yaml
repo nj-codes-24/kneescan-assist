@@ -1,0 +1,14 @@
+# What scripts/pipeline.py runs for each stage. Edit here, not in code.
+# The final model is a combined run of plane specialists (docs/decisions.md D-014; 2 seeds per plane, docs/experiments.md L3).
+baseline_config: configs/b0_alexnet.yaml
+final_model:
+  name: reader_r2_seeds                  # combined run folder under runs/
+  components:                            # one Reader config per plane specialist and seed
+    - configs/reader_sag_att.yaml
+    - configs/reader_cor_att.yaml
+    - configs/reader_ax_att.yaml
+    - configs/reader_sag_att_s43.yaml
+    - configs/reader_cor_att_s43.yaml
+    - configs/reader_ax_att_s43.yaml
+hybrid_name: hybrid_r2s_b0                # final model + B0, mean logit (the one extra variant EVAL_PROTOCOL R8 allows)
+explain_cases_per_finding: 2             # failure gallery: worst false negatives and false positives per finding

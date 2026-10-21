@@ -1,0 +1,141 @@
+frozen_at: '2026-10-20T21:00:57'
+git: f2780bc (+ uncommitted changes)
+models:
+  baseline:
+    run: runs/b0
+    cv_macro_auc: 0.8549
+    cv_macro_auc_ci:
+    - 0.8393
+    - 0.8691
+    thresholds_t_hs:
+      abnormal: 0.6153602510997506
+      acl: 0.012580598074055658
+      meniscus: 0.0948970522386698
+    platt:
+      abnormal:
+      - 0.7241860533261096
+      - 0.01579707630758413
+      acl:
+      - 0.5936067961627652
+      - -0.12314987686063772
+      meniscus:
+      - 0.5891739722454494
+      - -0.09010006627865515
+    weights:
+      runs/b0/fold0/axial/best_abnormal.pt: c0c2e72a47a486c98f357bfc8cca4e21c6e658f4bd246e608bdcafb15f4137ed
+      runs/b0/fold0/axial/best_acl.pt: 29bfc9b973b2baede7c34256e7eb50ba7dc7ce0a318db7064ed4be7cece77e61
+      runs/b0/fold0/axial/best_meniscus.pt: e78bfc13593cc6ff137d7ebc215b80db1960aa54d371b99020550540a50f07ba
+      runs/b0/fold0/coronal/best_abnormal.pt: 1c3caea06767914e2764baf3f86cbb4f897889b3140f62471ee82a68d703c608
+      runs/b0/fold0/coronal/best_acl.pt: 0ee572bd1bf340b2b658c7c993823f292c579b9911deac5376aef55b4d5b1722
+      runs/b0/fold0/coronal/best_meniscus.pt: 6219b59603d7240570441aeff83ffc007a2187fc9ab949db05d00a40fcf72296
+      runs/b0/fold0/sagittal/best_abnormal.pt: a6e0daab3b2556e20490f89cb8693c537b99c17198919477e4a34c5bac60ab14
+      runs/b0/fold0/sagittal/best_acl.pt: 48191ed852db5c7bea992cb222e3e5191aa97f5f924a6cc46ff5abb778ff769e
+      runs/b0/fold0/sagittal/best_meniscus.pt: bb39641a7ea6988c9e5fbaec0af8be25052eb2c875afe0af3f69ba359d91fa6f
+      runs/b0/fold1/axial/best_abnormal.pt: 70774e82b772fb14fe52a8c96d975865ebeddbf0d513296a41e2051a8ed92992
+      runs/b0/fold1/axial/best_acl.pt: 3d9aef1ab187b8a7af48353d5d4eb9780280f96e325787fb3608ccc8496a28b5
+      runs/b0/fold1/axial/best_meniscus.pt: 0529377e1dd000092b533b081489d49d45adb5ab8c77f3124dab9ef41d9425e2
+      runs/b0/fold1/coronal/best_abnormal.pt: 9e573a72c0f06f70c01af403b7cb8f38e14be1d58eb071fe96bd936c1e267d28
+      runs/b0/fold1/coronal/best_acl.pt: e8841a1001ab465997005927ab91b4d6b75a1c681d9fd257a3e9f9083597fde4
+      runs/b0/fold1/coronal/best_meniscus.pt: 7750765346b1c030b81ee0297632f081a06f5713ceed468210bbb560df027a78
+      runs/b0/fold1/sagittal/best_abnormal.pt: 64980c0a2b6f523e489aafc9295a1ec6cba4858720a7c507ea7cced1a47af705
+      runs/b0/fold1/sagittal/best_acl.pt: d26cddc32d39665fbccdc411ba1c5d5b080f070554016e40cd90470607294337
+      runs/b0/fold1/sagittal/best_meniscus.pt: ae7dbfc9c7db865f0e78a093cfe1b47540e5032acce6a039375b02eb589c2529
+      runs/b0/fold2/axial/best_abnormal.pt: fc88aecad2d5c49536879587ca1a67573061765119bdc780f85559dd1439ac2b
+      runs/b0/fold2/axial/best_acl.pt: cfe7f14bfb7507aa9d9fb0ea6c0443bc41fe0aaafe536605ac4282b76eb273ac
+      runs/b0/fold2/axial/best_meniscus.pt: 48675ee548104ac8655ed8bb9fbd03a61893286ab3f20d56618cfcc55766be03
+      runs/b0/fold2/coronal/best_abnormal.pt: 012c5019c9e45a55c1f6f409e0fb4f21d9e66bb340cdee6d267477da2d3603e0
+      runs/b0/fold2/coronal/best_acl.pt: 8b4b95ea221bbe800145ad959a3490e1c876f91df35bb8c0eb06e82b194e424c
+      runs/b0/fold2/coronal/best_meniscus.pt: d5bde0657dbaddd1f982e4281618c28ef9e6b9b7251a2693c91928952b0587f0
+      runs/b0/fold2/sagittal/best_abnormal.pt: f09d6a9fe736cf1353349aaed634da9de700a3f40eec06786ebf6593c1076bfb
+      runs/b0/fold2/sagittal/best_acl.pt: a0a951ab80f58b643392c451c8110d4496e723b25fd611e2f14d64309c0d6628
+      runs/b0/fold2/sagittal/best_meniscus.pt: 6140e3268f36e004b1494412d718023980a03a4317b055fe529d441cc681ce69
+      runs/b0/fold3/axial/best_abnormal.pt: f7c7776c76d360b2e394990718dee005ec91aadeeced4f63640a3539310278e2
+      runs/b0/fold3/axial/best_acl.pt: 777733591b73432ec0de0e0159de38dd633f2ad01b61aa4d748e18b4bf243f75
+      runs/b0/fold3/axial/best_meniscus.pt: 5ec16f5e27b219122fae3e6b03e6e8ddab07fa8434527e12a4b77ca75d8b69c6
+      runs/b0/fold3/coronal/best_abnormal.pt: dfc2eb088bd2de27325f955a42f459059c7c61cefd0a10bf1db4be9d4743eacd
+      runs/b0/fold3/coronal/best_acl.pt: b6f9c2395f0e04cf3f666336c02929d7b003929839939c4dd3cf6826eb7c1a08
+      runs/b0/fold3/coronal/best_meniscus.pt: 7a8c812b7484ed06b431f1eb103fe8a5a9ba994fb622b5eeeb00328b8a99b2eb
+      runs/b0/fold3/sagittal/best_abnormal.pt: b85e3a613448bf14371aa580200060da15bdd7f747371fdfcf59e963b774dfd6
+      runs/b0/fold3/sagittal/best_acl.pt: 5baf07b529eb38145c8359f2d1842135f1aee55e3670e1c9fd0785b7018d602b
+      runs/b0/fold3/sagittal/best_meniscus.pt: 2f69af01d9d2d33edf648016e6f381a926f1a1671d40f373633c826ba002a738
+      runs/b0/fold4/axial/best_abnormal.pt: 2b9375a5462971cbefba03047478e8bfff906166a21626171526b0205d2ba7f2
+      runs/b0/fold4/axial/best_acl.pt: 46c303d928f6b1b3ce983be1e20470a5c7a0265e1d752e860fa808a9d496aff9
+      runs/b0/fold4/axial/best_meniscus.pt: 5b302a6e87a52e6bba5a6c506c0082eb1705c77471a6c0eba54f8e536899192b
+      runs/b0/fold4/coronal/best_abnormal.pt: 5ccdb68ff10c0dfe59f25d61a3a1433710e65db34593c6cff198e44c4066d756
+      runs/b0/fold4/coronal/best_acl.pt: 3250ee85c7102c733f6781f08d5a5cadbac7e5a59e499393bba97d1555b8be82
+      runs/b0/fold4/coronal/best_meniscus.pt: c76f12c9703397c8db307eab6c8c3b94c662ffe73b8aa242d0d3d668779c9d79
+      runs/b0/fold4/sagittal/best_abnormal.pt: a4f24b06e9ca0c4fea371b83c9cee7c7d3c8ba39ff9b9891fa67d1b70063f4ef
+      runs/b0/fold4/sagittal/best_acl.pt: 2b8be7323544ddfe0d73ae76c2d55906a45a0943a74d1f10f3f43d2eebd27e86
+      runs/b0/fold4/sagittal/best_meniscus.pt: 22e0d1e61ea7ae08682c75f74263e26abb9637fe86a830dafa4091d3ddef01ba
+  reader:
+    run: runs/reader_r2_seeds
+    cv_macro_auc: 0.8539
+    cv_macro_auc_ci:
+    - 0.8386
+    - 0.8681
+    thresholds_t_hs:
+      abnormal: 0.3384162451671594
+      acl: 0.2483137393906657
+      meniscus: 0.3572629506310467
+    platt:
+      abnormal:
+      - 1.0573899425798374
+      - 1.1234642090693021
+      acl:
+      - 1.1769184887955344
+      - -1.2504095600710206
+      meniscus:
+      - 1.0611439582111681
+      - -0.5744889431464122
+    weights:
+      runs/reader_ax_att/fold0/best.pt: 75649e91b0eb5d8a496177c28084c4fbe7932e6c8eee20be6b8dae601c6632ec
+      runs/reader_ax_att/fold1/best.pt: 4bdb44eea181f6d3c68befc9701a4578d513514864fa2a7e2beb933f0fa8f03e
+      runs/reader_ax_att/fold2/best.pt: 001dde323080737049be88ca1f107beb935534b4c1fc3f5b37ccfffd217d64c4
+      runs/reader_ax_att/fold3/best.pt: 42dd01e1ab24e06208d1a8ec8ee86c696ddbdcc5b44db8ad8a1c41d9fabc4eb8
+      runs/reader_ax_att/fold4/best.pt: 4aaab7c2b5b3ccdb4b96e7049433456d0190bfb718e831f38e48fba8d482111c
+      runs/reader_ax_att_s43/fold0/best.pt: a9a730aa85895d43cab601ce0d8db5784ec2292a70b23b61ad8c045630d96726
+      runs/reader_ax_att_s43/fold1/best.pt: e52bcc7429c916e333ee81b52fc40e32de3838b0e329bb6b2cbdc83b12cadf96
+      runs/reader_ax_att_s43/fold2/best.pt: 9cc2ebf7a1fd2ecf799be1736ddf69db475d63fd670129145339b6afaaf8848e
+      runs/reader_ax_att_s43/fold3/best.pt: dcd3af32a086352ede409d4bd0ec6c733383c0b552ea4b014fdffb0c7a8a0593
+      runs/reader_ax_att_s43/fold4/best.pt: 0dd61dfece63f3fb44e917cc27851582eca494953a455660d0d0b43c665467ec
+      runs/reader_cor_att/fold0/best.pt: 5e750439940bbb12bd27487b579720fdbf670af3c3187c26b062b5292d2f37ab
+      runs/reader_cor_att/fold1/best.pt: 9d86cf4ee7f7372c70fbf8ad9b0767d41c4ffc490f205be0fd27ab1d016bb57b
+      runs/reader_cor_att/fold2/best.pt: de1a71c7741cf96e52e72a0a7b7c1cd9550e3045ad3fc8fc1afd6ee71ef33e08
+      runs/reader_cor_att/fold3/best.pt: 73a27158ae5ffbf0c309ca8ac2c2c5e5dae76fa48941357d02485fd478ddab21
+      runs/reader_cor_att/fold4/best.pt: 4f45fb682947db0a3cad0d6aedf7f30d9d76791c86d3f946c397108e0974c11b
+      runs/reader_cor_att_s43/fold0/best.pt: 62165411095a127fe6e40eceaada0e2814ffb2c6324e5118ff3bd855dfbdc23c
+      runs/reader_cor_att_s43/fold1/best.pt: 198c943d1f485bfce4667a3455d5965f66703260bc81073f1bc6faecad44b178
+      runs/reader_cor_att_s43/fold2/best.pt: bc4c083a4db253d825380f4df2bee004b9ca7b5ea2ae243b464781f95e42e973
+      runs/reader_cor_att_s43/fold3/best.pt: adee4c85724367da77df0507931d909539d3597adb99b9130018d2b9ed1d4a75
+      runs/reader_cor_att_s43/fold4/best.pt: 4bd4ca47eca19d931e40e597328f5b67795d946667d60400bde1c0ffecb57eb7
+      runs/reader_sag_att/fold0/best.pt: 98e245bddafb915f9aa72c1304a4583ee65f90666b3d32fab439da61a236549c
+      runs/reader_sag_att/fold1/best.pt: 202a69c727cd1267f729af17d3ca92125247fc798be34feacaa74604cc6c0dd7
+      runs/reader_sag_att/fold2/best.pt: abcc67d5e80d7b68970c68fb788af8759657a61771d51f98a51317c139fe8790
+      runs/reader_sag_att/fold3/best.pt: f2de10f3ee1ebe022213637dfd299552c8595fa6810b487058ff6b0c8bd2c1a2
+      runs/reader_sag_att/fold4/best.pt: a301c89d03860a13c21aec5ee0b4e8978c7869f622f863ff1e1a6a72402b0b62
+      runs/reader_sag_att_s43/fold0/best.pt: 72722871c3552158184999bfbde28451f586024b9cd724500e477b3d0b795210
+      runs/reader_sag_att_s43/fold1/best.pt: 75c34a90c7d81b595baefd2b77b804349c5ca59062b340ee4193ac845fa0bf45
+      runs/reader_sag_att_s43/fold2/best.pt: 16eb94e87c08788ca4b60aef000a9ff998645b5f40ffee3f433efd1c92cdaf25
+      runs/reader_sag_att_s43/fold3/best.pt: 4f6c9d4e1e2d2e3df32b2c6a5b18c713bac49f6e336a2d9433679988c6a84238
+      runs/reader_sag_att_s43/fold4/best.pt: 73dcbed2dd59b2c10f786dacec30254bf890535468bbf953dcd88796d391d94e
+  hybrid:
+    run: runs/hybrid_r2s_b0
+    cv_macro_auc: 0.8639
+    cv_macro_auc_ci:
+    - 0.8494
+    - 0.8773
+    thresholds_t_hs:
+      abnormal: 0.5216045272441862
+      acl: 0.0638366760274386
+      meniscus: 0.1968321531155326
+    platt:
+      abnormal:
+      - 0.9011107694120357
+      - 0.42093359324563473
+      acl:
+      - 0.8513482814472095
+      - -0.41608534568979605
+      meniscus:
+      - 0.8223015653609477
+      - -0.22983364413375393
+    weights: {}

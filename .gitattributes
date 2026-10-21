@@ -1,0 +1,2 @@
+# evidence/ holds original outputs with SHA-256 fingerprints: store them byte for byte (no line-ending conversion)
+evidence/** -text

@@ -1,0 +1,29 @@
+# Runs on GitHub's servers at every push: proof that the code in this repository works from a fresh clone, without any data,
+# weights or GPU. The unit tests and the smoke test use synthetic data; test_evidence.py checks the README's numbers against
+# the original reports in evidence/; the audit checks that nothing licensed or secret is committed.
+name: tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Install CPU-only PyTorch (no GPU on GitHub's runners)
+        run: pip install torch==2.8.0 torchvision==0.23.0 --index-url https://download.pytorch.org/whl/cpu
+      - name: Install the other dependencies
+        run: pip install -r requirements.txt
+      - name: Unit tests (including README numbers vs evidence/)
+        run: python -m pytest -q
+      - name: Smoke test (whole pipeline on synthetic data)
+        run: python scripts/smoke_test.py
+      - name: Repository audit (no data, labels or secrets)
+        run: python scripts/audit_repo.py

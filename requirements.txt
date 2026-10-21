@@ -1,0 +1,36 @@
+# KneeScan Assist: Python dependencies (installed into the project venv only, never system-wide).
+#
+# Install (from the repo root, with the venv's python):
+#   .venv\Scripts\python.exe -m pip install -r requirements.txt
+#
+# Why these pins: torch 2.8 + CUDA 12.8 wheels support the RTX 2000 Ada (sm_89) on pc_c.
+# If your GPU/driver is older, choose a different --index-url (see pytorch.org "Get Started").
+
+--extra-index-url https://download.pytorch.org/whl/cu128
+torch==2.8.0
+torchvision==0.23.0
+
+# Core numerics / ML
+numpy>=1.26,<3
+scipy>=1.11
+pandas>=2.2,<3
+scikit-learn>=1.4,<2
+timm>=1.0,<1.1            # ImageNet-pretrained 2D backbones for "The Reader"
+
+# Config, logging, progress
+pyyaml>=6.0
+tensorboard>=2.16
+tqdm>=4.66
+matplotlib>=3.8           # reliability plots, ROC curves, Grad-CAM overlays
+
+# Data I/O
+pydicom>=2.4              # DICOM upload in the Clinic App
+py7zr>=0.21               # extracts KneeMRI's .7z without installing 7-Zip system-wide
+
+redivis>=0.21            # downloads MRNet from Stanford AIMI (your own login; see scripts/fetch_mrnet.py)
+
+# Tests
+pytest>=8.0
+
+# The Clinic App (app/clinic_app.py): local web UI
+gradio>=6.0,<7

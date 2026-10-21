@@ -1,0 +1,36 @@
+﻿# Data is licensed and must never be committed (docs/DATA.md)
+/data/
+# Training outputs, checkpoints, TensorBoard
+/runs/
+/results/
+*.egg-info/
+*.pt
+*.pth
+*.ckpt
+# Python / venv
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+# Editors / OS
+.vscode/
+.idea/
+Thumbs.db
+# Data-derived outputs: gallery figures show MRNet images (no redistribution); logs/ = run stdout/stderr + the local run diary
+/outputs/
+/logs/
+# Never commit data or weights, wherever they end up (second safety net behind /data/ and /runs/)
+*.npy
+*.npz
+*.pck
+*.dcm
+*.zip
+*.7z
+*.safetensors
+*.onnx
+# Gradio's upload cache and any credentials
+.gradio/
+kaggle.json
+.env
+# weights bundle + deploy folder (scripts/export_weights.py, scripts/build_deploy.py): never git
+/export/

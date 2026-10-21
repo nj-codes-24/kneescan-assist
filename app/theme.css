@@ -1,0 +1,118 @@
+/* theme.css: the look of KneeScan Assist (D-023, D-024). Clarity first: one job per screen, the answer in words, calm colours.
+   Colours are tokens with a light and a dark set. Gradio adds the class .dark in dark mode. */
+
+:root {
+  --ks-bg: #fbfbfd; --ks-card: #ffffff; --ks-text: #1d1d1f; --ks-dim: #6e6e73; --ks-faint: #86868b; --ks-line: rgba(0, 0, 0, 0.08);
+  --ks-blue: #0071e3; --ks-track: #e8e8ed;
+  --ks-likely: #d70015; --ks-likely-soft: rgba(255, 59, 48, 0.10);
+  --ks-possible: #c45500; --ks-possible-soft: rgba(255, 149, 0, 0.12);
+  --ks-unlikely: #1d8a3e; --ks-unlikely-soft: rgba(52, 199, 89, 0.12);
+  --ks-glass: rgba(255, 255, 255, 0.72); --ks-shadow: 0 1px 2px rgba(0, 0, 0, 0.04), 0 12px 40px rgba(0, 0, 0, 0.08);
+  --ks-aurora: radial-gradient(55% 45% at 18% 22%, rgba(90, 200, 250, 0.45), transparent 70%),
+               radial-gradient(45% 45% at 82% 28%, rgba(175, 82, 222, 0.30), transparent 70%),
+               radial-gradient(60% 55% at 50% 100%, rgba(0, 113, 227, 0.28), transparent 70%), #f5f5f7;
+  --ks-font: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI Variable Display", "Segoe UI", system-ui, sans-serif;
+}
+.dark {
+  --ks-bg: #000000; --ks-card: #161617; --ks-text: #f5f5f7; --ks-dim: #a1a1a6; --ks-faint: #86868b; --ks-line: rgba(255, 255, 255, 0.10);
+  --ks-blue: #2997ff; --ks-track: #2c2c2e;
+  --ks-likely: #ff6961; --ks-likely-soft: rgba(255, 69, 58, 0.16);
+  --ks-possible: #ffb340; --ks-possible-soft: rgba(255, 159, 10, 0.16);
+  --ks-unlikely: #30d158; --ks-unlikely-soft: rgba(48, 209, 88, 0.14);
+  --ks-glass: rgba(28, 28, 30, 0.72); --ks-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  --ks-aurora: radial-gradient(55% 45% at 18% 22%, rgba(10, 132, 255, 0.35), transparent 70%),
+               radial-gradient(45% 45% at 82% 28%, rgba(191, 90, 242, 0.25), transparent 70%),
+               radial-gradient(60% 55% at 50% 100%, rgba(100, 210, 255, 0.18), transparent 70%), #000000;
+}
+
+/* ---- page frame: no Gradio chrome, our font, our background ---- */
+body, .gradio-container { background: var(--ks-bg) !important; font-family: var(--ks-font) !important; color: var(--ks-text); }
+.gradio-container { width: 100% !important; max-width: 1080px !important; margin: 0 auto !important; padding: 12px 20px 40px !important; }
+.gradio-container > .main, .gradio-container > .main > .wrap, .gradio-container > .main > .wrap > .contain { padding-left: 0 !important; padding-right: 0 !important; max-width: none !important; }
+footer:not(.ks-footer) { display: none !important; }
+.ks-stage .block, .ks-stage .form, .ks-results-page .block, .ks-results-page .form { background: transparent !important; border: none !important;
+  box-shadow: none !important; }
+.ks-brand { font-size: 19px; font-weight: 600; letter-spacing: -0.02em; display: flex; align-items: center; gap: 9px; color: var(--ks-text); }
+.ks-mark { width: 22px; height: 22px; border-radius: 7px; display: inline-block; background: conic-gradient(from 210deg, #0071e3, #5ac8fa, #af52de, #0071e3); }
+.ks-tag { font-size: 12px; color: var(--ks-dim); border: 1px solid var(--ks-line); border-radius: 999px; padding: 4px 12px; background: var(--ks-glass); }
+
+/* ================= 1. LANDING: one stage, one job ================= */
+.ks-stage { background: var(--ks-aurora) !important; border-radius: 36px !important; min-height: 88vh; padding: 22px 28px 30px !important;
+  display: flex !important; flex-direction: column !important; justify-content: space-between !important; border: 1px solid var(--ks-line) !important; }
+.ks-landing-top { display: flex; align-items: center; justify-content: space-between; }
+.ks-landing-hero { text-align: center; padding: 9vh 0 4vh; }
+.ks-landing-hero h1 { font-size: clamp(40px, 7vw, 76px); font-weight: 700; letter-spacing: -0.045em; line-height: 1.02; margin: 0 0 20px; color: var(--ks-text); }
+.ks-landing-hero p { font-size: clamp(17px, 2.1vw, 21px); line-height: 1.45; color: var(--ks-dim); margin: 0 auto; max-width: 580px; }
+.ks-landing-hero b { color: var(--ks-text); font-weight: 600; }
+.ks-glass { max-width: 560px; width: 100%; margin: 0 auto !important; background: var(--ks-glass) !important; border-radius: 26px !important;
+  border: 1px solid var(--ks-line) !important; box-shadow: var(--ks-shadow) !important; padding: 14px !important;
+  backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px); }
+.ks-glass .block { background: transparent !important; }
+.ks-actions { gap: 10px !important; }
+.ks-primary button, button.ks-primary { background: var(--ks-blue) !important; color: #fff !important; border: none !important; border-radius: 999px !important;
+  font-size: 17px !important; font-weight: 500 !important; min-height: 48px !important; box-shadow: none !important; }
+.ks-secondary button, button.ks-secondary { background: transparent !important; color: var(--ks-blue) !important; border: 1px solid var(--ks-line) !important;
+  border-radius: 999px !important; font-size: 15px !important; font-weight: 500 !important; min-height: 48px !important; box-shadow: none !important; }
+.ks-primary button:hover, button.ks-primary:hover, .ks-secondary button:hover, button.ks-secondary:hover { filter: brightness(1.06); }
+.ks-landing-note { text-align: center; font-size: 13px; line-height: 1.6; color: var(--ks-dim); margin: 22px auto 0; max-width: 640px; }
+.ks-landing-note b { color: var(--ks-text); font-weight: 600; }
+
+/* ================= 2. RESULTS: the answer first ================= */
+.ks-topbar { display: flex !important; align-items: center !important; justify-content: space-between !important; padding: 6px 0 4px !important; }
+.ks-topbar > * { flex: 0 0 auto !important; min-width: 0 !important; width: auto !important; }
+.ks-topbar .ks-secondary button, .ks-topbar button.ks-secondary { min-height: 36px !important; font-size: 14px !important; padding: 0 18px !important; }
+.ks-verdict { padding: 7vh 0 10px; }
+.ks-verdict h1 { font-size: clamp(34px, 5.4vw, 58px); font-weight: 700; letter-spacing: -0.04em; line-height: 1.04; margin: 0 0 14px; color: var(--ks-text); }
+.ks-verdict p { font-size: clamp(17px, 2.2vw, 22px); color: var(--ks-dim); margin: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; }
+.ks-sep { color: var(--ks-faint); }
+.ks-dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; margin-right: 2px; }
+.ks-dot-likely { background: var(--ks-likely); } .ks-dot-possible { background: var(--ks-possible); } .ks-dot-unlikely { background: var(--ks-unlikely); }
+.ks-series { font-size: 13px; color: var(--ks-faint); margin: 14px 0 26px; }
+.ks-note { font-size: 14px; line-height: 1.5; color: var(--ks-dim); margin: 16px 0 0; max-width: 760px; padding: 10px 14px;
+  border-radius: 14px; background: var(--ks-track); }
+
+.ks-rows { display: grid; gap: 12px; }
+.ks-row { display: grid; grid-template-columns: 220px 1fr; gap: 24px; align-items: center; background: var(--ks-card); border: 1px solid var(--ks-line);
+  border-radius: 24px; padding: 22px 26px; box-shadow: var(--ks-shadow); }
+.ks-row-name h3 { font-size: 19px; font-weight: 600; letter-spacing: -0.02em; margin: 0; color: var(--ks-text); }
+.ks-row-name p { font-size: 13px; color: var(--ks-dim); margin: 3px 0 0; }
+.ks-row-word { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 10px; }
+.ks-word { font-size: 28px; font-weight: 700; letter-spacing: -0.03em; }
+.ks-pct { font-size: 28px; font-weight: 600; letter-spacing: -0.03em; color: var(--ks-text); font-variant-numeric: tabular-nums; }
+.ks-band-likely .ks-word { color: var(--ks-likely); } .ks-band-possible .ks-word { color: var(--ks-possible); }
+.ks-band-unlikely .ks-word { color: var(--ks-unlikely); }
+.ks-meter { position: relative; height: 8px; border-radius: 999px; background: var(--ks-track); }
+.ks-meter-fill { position: absolute; inset: 0 auto 0 0; border-radius: 999px; }
+.ks-band-likely .ks-meter-fill { background: var(--ks-likely); } .ks-band-possible .ks-meter-fill { background: var(--ks-possible); }
+.ks-band-unlikely .ks-meter-fill { background: var(--ks-unlikely); }
+.ks-meter-mark { position: absolute; top: -5px; width: 2px; height: 18px; border-radius: 1px; background: var(--ks-text); opacity: 0.6; }
+.ks-row-explain { font-size: 14px; line-height: 1.5; color: var(--ks-dim); margin: 12px 0 0; }
+
+/* ---- where it looked: segmented control (CSS-only radio buttons) ---- */
+.ks-evidence { margin-top: 56px; }
+.ks-evidence h2 { font-size: clamp(26px, 3.4vw, 34px); font-weight: 700; letter-spacing: -0.03em; margin: 0 0 8px; color: var(--ks-text); }
+.ks-evidence-text { font-size: 15px; line-height: 1.5; color: var(--ks-dim); margin: 0 0 18px; max-width: 680px; }
+.ks-radio { position: absolute; opacity: 0; pointer-events: none; }
+.ks-seg { display: inline-flex; flex-wrap: wrap; gap: 2px; padding: 3px; border-radius: 999px; background: var(--ks-track); margin: 0 0 18px; }
+.ks-seg label { font-size: 14px; font-weight: 500; color: var(--ks-dim); padding: 7px 18px; border-radius: 999px; cursor: pointer; }
+.ks-where { display: none; }
+#ks-t-abnormal:checked ~ .ks-seg .ks-seg-abnormal, #ks-t-acl:checked ~ .ks-seg .ks-seg-acl,
+#ks-t-meniscus:checked ~ .ks-seg .ks-seg-meniscus { background: var(--ks-card); color: var(--ks-text); box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12); }
+#ks-t-abnormal:checked ~ .ks-panels .ks-p-abnormal, #ks-t-acl:checked ~ .ks-panels .ks-p-acl,
+#ks-t-meniscus:checked ~ .ks-panels .ks-p-meniscus { display: block; }
+.ks-tiles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.ks-tiles:has(> .ks-tile:only-child) { grid-template-columns: minmax(0, 440px); }   /* one view only, e.g. a sagittal-only study */
+.ks-tile { margin: 0; background: var(--ks-card); border: 1px solid var(--ks-line); border-radius: 20px; overflow: hidden; }
+.ks-tile img { display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; background: #000; }
+.ks-tile figcaption { display: flex; flex-direction: column; gap: 2px; padding: 11px 14px 13px; font-size: 13px; color: var(--ks-dim); }
+.ks-tile figcaption b { color: var(--ks-text); font-weight: 600; }
+
+.ks-limits { font-size: 13px; line-height: 1.6; color: var(--ks-dim); margin: 56px 0 0; padding-top: 20px; border-top: 1px solid var(--ks-line); }
+.ks-limits b { color: var(--ks-text); font-weight: 600; }
+
+/* ---- narrow screens ---- */
+@media (max-width: 760px) {
+  .ks-stage { border-radius: 26px !important; padding: 18px 16px 24px !important; }
+  .ks-row { grid-template-columns: 1fr; gap: 12px; padding: 20px; }
+  .ks-tiles { grid-template-columns: 1fr; }
+}

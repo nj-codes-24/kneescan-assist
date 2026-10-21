@@ -1,0 +1,15 @@
+# Settings for the Clinic App (app/clinic_app.py). Research prototype, not a medical device.
+run_dir: runs/reader_r2_seeds   # the final Reader: 2-seed plane specialists (docs/decisions.md D-022)
+heatmap_alpha: 0.45             # how strongly the heatmap colours cover the grey MRI slice
+slice_batch: 8                  # slices per backbone pass: same results, much less memory on a small server (D-026)
+host: 127.0.0.1                 # local only: the app is never exposed on the network by default
+port: 7860
+cache_seconds: 600              # Gradio deletes uploaded files older than this, checked this often
+# Plain-language words shown for the calibrated probability (D-024). Purely wording; the screening flag uses the frozen threshold.
+likely_from: 0.70               # probability >= 70%  -> "Likely"
+unlikely_below: 0.30            # probability <  30%  -> "Unlikely"; in between -> "Possible"
+# Optional sample study for demos on this PC (MRNet files, never committed; never shown publicly: docs/decisions.md D-025)
+sample_dir: data/demo_inputs
+sample_note: ""                 # line shown under the verdict for the sample (the hosted demo names its source and diagnosis)
+hosted: false                   # true only in the hosted demo (configs/deploy.yaml): changes the privacy line on the landing page
+weights_repo: ""                # empty = load run_dir from this computer; the hosted demo sets its private HF model repo
